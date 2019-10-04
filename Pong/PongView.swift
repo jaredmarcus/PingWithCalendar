@@ -117,6 +117,6 @@ class PongView: ScreenSaverView {
     }
     
     // MARK: - Clock Functions
-    // Rob initial pull request
+    // Rob initial pull request on 'clock' branch
     
 }
