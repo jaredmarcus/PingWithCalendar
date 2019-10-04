@@ -22,6 +22,7 @@ class PongView: ScreenSaverView {
         super.init(frame: frame, isPreview: isPreview)
         ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
         ballVelocity = initialVelocity()
+        displayTime()
     }
 
     @available(*, unavailable)
@@ -117,6 +118,12 @@ class PongView: ScreenSaverView {
     }
     
     // MARK: - Clock Functions
-    // Rob initial pull request on 'clock' branch
+    private func displayTime() {
+        let time = View()
+        time.translatesAutoresizingMaskIntoConstraints = false;
+        time.detailLabel.stringValue = "Hello World"
+        addSubview(time)
+    }
+    
     
 }
