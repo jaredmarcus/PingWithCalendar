@@ -10,22 +10,22 @@ import AppKit
 
 final class View: NSView {
 
-    // Label for numbers: hours and minutes
+    //Label for numbers: "hours" and "minutes"
     let textLabel: Label = {
-        let label = Label()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .white
-        label.alignment = .center
-        return label
+        let hour = Label()
+        hour.translatesAutoresizingMaskIntoConstraints = false
+        hour.textColor = .white
+        hour.alignment = .center
+        return hour
     }()
     
-    // Label for text: "hours" and "minutes"
+    //Label for text: "hours" and "minutes"
     let detailLabel: Label = {
-        let label = Label()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .gray             // or use NSColor(white: 1, alpha: 0.5)
-        label.alignment = .center
-        return label
+        let minutes = Label()
+        minutes.translatesAutoresizingMaskIntoConstraints = false
+        minutes.textColor = .gray             // or use NSColor(white: 1, alpha: 0.5)
+        minutes.alignment = .center
+        return minutes
     }()
 
     // Initializers

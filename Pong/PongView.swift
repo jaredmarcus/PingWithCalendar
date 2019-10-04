@@ -15,7 +15,8 @@ class PongView: ScreenSaverView {
     private var paddlePosition: CGFloat = 0
     private let ballRadius: CGFloat = 10
     private let paddleBottomOffset: CGFloat = 50
-    private let paddleSize = NSSize(width: 60, height: 20)
+    private let paddleSize = NSSize(width: 80, height: 20)
+    
 
     // MARK: - Initialization
     override init?(frame: NSRect, isPreview: Bool) {
@@ -32,9 +33,10 @@ class PongView: ScreenSaverView {
 
     // MARK: - Lifecycle
     override func draw(_ rect: NSRect) {
-        drawBackground(.white)
+        drawBackground(.black)
         drawBall()
         drawPaddle()
+        clock()
     }
 
     override func animateOneFrame() {
@@ -75,7 +77,7 @@ class PongView: ScreenSaverView {
         let ball = NSBezierPath(roundedRect: ballRect,
                                 xRadius: ballRadius,
                                 yRadius: ballRadius)
-        NSColor.black.setFill()
+        NSColor.white.setFill()
         ball.fill()
     }
 
@@ -85,7 +87,7 @@ class PongView: ScreenSaverView {
                                 width: paddleSize.width,
                                 height: paddleSize.height)
         let paddle = NSBezierPath(rect: paddleRect)
-        NSColor.black.setFill()
+        NSColor.white.setFill()
         paddle.fill()
     }
 
@@ -124,6 +126,4 @@ class PongView: ScreenSaverView {
         time.detailLabel.stringValue = "Hello World"
         addSubview(time)
     }
-    
-    
 }

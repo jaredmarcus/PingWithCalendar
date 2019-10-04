@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3715228D2347EE6E00613EC1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3715228C2347EE6E00613EC1 /* Date.swift */; };
 		37FE5442234790D4002C7F0F /* PongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE5441234790D4002C7F0F /* PongView.swift */; };
 		EA5572472347E98100E978B1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5572462347E98100E978B1 /* View.swift */; };
 		EA5572492347E9A100E978B1 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5572482347E9A100E978B1 /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3715228C2347EE6E00613EC1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		37FE543423479080002C7F0F /* Pong.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pong.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FE543B23479081002C7F0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FE5441234790D4002C7F0F /* PongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				37FE5441234790D4002C7F0F /* PongView.swift */,
 				EA5572462347E98100E978B1 /* View.swift */,
 				EA5572482347E9A100E978B1 /* Label.swift */,
+				3715228C2347EE6E00613EC1 /* Date.swift */,
 			);
 			path = Pong;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				EA5572472347E98100E978B1 /* View.swift in Sources */,
 				37FE5442234790D4002C7F0F /* PongView.swift in Sources */,
 				EA5572492347E9A100E978B1 /* Label.swift in Sources */,
+				3715228D2347EE6E00613EC1 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +265,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = K98ZG3M3M3;
+				DEVELOPMENT_TEAM = N2CDPAH2N6;
 				INFOPLIST_FILE = Pong/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -283,7 +287,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = K98ZG3M3M3;
+				DEVELOPMENT_TEAM = N2CDPAH2N6;
 				INFOPLIST_FILE = Pong/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
 				LD_RUNPATH_SEARCH_PATHS = (
