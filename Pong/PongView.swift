@@ -117,8 +117,6 @@ class PongView: ScreenSaverView {
     }
     
     // MARK: - Clock Functions
-    let currentDateTime = Date()
-    Date().timeIntervalSinceReferenceDate
+    // Rob initial pull request on 'clock' branch
     
-    //trying to see if this works
 }
