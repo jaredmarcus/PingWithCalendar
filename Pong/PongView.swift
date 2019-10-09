@@ -13,9 +13,9 @@ class PongView: ScreenSaverView {
     private var ballPosition: CGPoint = .zero
     private var ballVelocity: CGVector = .zero
     private var paddlePosition: CGFloat = 0
-    private let ballRadius: CGFloat = 10
+    private let ballRadius: CGFloat = 20
     private let paddleBottomOffset: CGFloat = 50
-    private let paddleSize = NSSize(width: 80, height: 20)
+    private let paddleSize = NSSize(width: 100, height: 20)
     
 
     // MARK: - Initialization
