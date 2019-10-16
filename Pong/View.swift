@@ -29,8 +29,11 @@ final class View: NSView {
     }()
 
     // Initializers
-    init() {
-        super.init(frame: .zero)
+    init(xpos:CGFloat, ypos:CGFloat) {
+        super.init(frame: NSRect(x: xpos,
+        y: ypos,
+        width: 100,
+        height: 100))
 
         addSubview(textLabel)
         addSubview(detailLabel)

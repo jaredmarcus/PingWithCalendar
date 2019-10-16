@@ -16,6 +16,8 @@ class PongView: ScreenSaverView {
     private let ballRadius: CGFloat = 20
     private let paddleBottomOffset: CGFloat = 50
     private let paddleSize = NSSize(width: 100, height: 20)
+    private var timePosition: CGPoint = .zero
+    private var timeLabel = View(xpos:0, ypos: 0)
     
 
     // MARK: - Initialization
@@ -23,6 +25,8 @@ class PongView: ScreenSaverView {
         super.init(frame: frame, isPreview: isPreview)
         ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
         ballVelocity = initialVelocity()
+        timeLabel = View(xpos: ballPosition.x - ballRadius,
+        ypos: ballPosition.y - ballRadius)
         displayTime()
     }
 
@@ -35,6 +39,7 @@ class PongView: ScreenSaverView {
     override func draw(_ rect: NSRect) {
         drawBackground(.black)
         drawBall()
+        drawTime()
         drawPaddle()
         clock()
     }
@@ -70,6 +75,7 @@ class PongView: ScreenSaverView {
     }
 
     private func drawBall() {
+        
         let ballRect = NSRect(x: ballPosition.x - ballRadius,
                               y: ballPosition.y - ballRadius,
                               width: ballRadius * 2,
@@ -121,9 +127,17 @@ class PongView: ScreenSaverView {
     
     // MARK: - Clock Functions
     private func displayTime() {
-        let time = View()
-        time.translatesAutoresizingMaskIntoConstraints = false;
-        time.detailLabel.stringValue = "Hello World"
-        addSubview(time)
+        timeLabel.translatesAutoresizingMaskIntoConstraints = false;
+        timeLabel.detailLabel.stringValue = "Hello"
+        timeLabel.textLabel.stringValue = "World"
+        addSubview(timeLabel)
     }
+    
+    private func drawTime() {
+        timeLabel.frame = NSRect(x: ballPosition.x - ballRadius,
+        y: ballPosition.y - ballRadius,
+        width: 100,
+        height: 100)
+    }
+    
 }
