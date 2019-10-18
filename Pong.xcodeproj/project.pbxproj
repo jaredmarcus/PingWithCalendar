@@ -11,6 +11,7 @@
 		37FE5442234790D4002C7F0F /* PongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FE5441234790D4002C7F0F /* PongView.swift */; };
 		EA5572472347E98100E978B1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5572462347E98100E978B1 /* View.swift */; };
 		EA5572492347E9A100E978B1 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5572482347E9A100E978B1 /* Label.swift */; };
+		EAF402E52359650000B7402A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF402E42359650000B7402A /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		37FE5441234790D4002C7F0F /* PongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongView.swift; sourceTree = "<group>"; };
 		EA5572462347E98100E978B1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		EA5572482347E9A100E978B1 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		EAF402E42359650000B7402A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		37FE543623479081002C7F0F /* Pong */ = {
 			isa = PBXGroup;
 			children = (
+				EAF402E42359650000B7402A /* Settings.swift */,
 				37FE543B23479081002C7F0F /* Info.plist */,
 				37FE5441234790D4002C7F0F /* PongView.swift */,
 				EA5572462347E98100E978B1 /* View.swift */,
@@ -144,6 +147,7 @@
 				37FE5442234790D4002C7F0F /* PongView.swift in Sources */,
 				EA5572492347E9A100E978B1 /* Label.swift in Sources */,
 				3715228D2347EE6E00613EC1 /* Date.swift in Sources */,
+				EAF402E52359650000B7402A /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

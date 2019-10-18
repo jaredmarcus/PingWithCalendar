@@ -13,11 +13,12 @@ class PongView: ScreenSaverView {
     private var ballPosition: CGPoint = .zero
     private var ballVelocity: CGVector = .zero
     private var paddlePosition: CGFloat = 0
-    private let ballRadius: CGFloat = 20
+    private let ballRadius: CGFloat = 70
     private let paddleBottomOffset: CGFloat = 50
-    private let paddleSize = NSSize(width: 100, height: 20)
-    private var timePosition: CGPoint = .zero
-    private var timeLabel = View(xpos:0, ypos: 0)
+    private let paddleSize = NSSize(width: 200, height: 40)
+    private var timeLabel = View(xpos:0, ypos: 0, bwidth: 0, bheight: 0)
+    private let timeOffsetY: CGFloat =  16;
+    private let timeOffsetX: CGFloat =  22;
     
 
     // MARK: - Initialization
@@ -25,8 +26,6 @@ class PongView: ScreenSaverView {
         super.init(frame: frame, isPreview: isPreview)
         ballPosition = CGPoint(x: frame.width / 2, y: frame.height / 2)
         ballVelocity = initialVelocity()
-        timeLabel = View(xpos: ballPosition.x - ballRadius,
-        ypos: ballPosition.y - ballRadius)
         displayTime()
     }
 
@@ -98,8 +97,8 @@ class PongView: ScreenSaverView {
     }
 
     private func initialVelocity() -> CGVector {
-        let desiredVelocityMagnitude: CGFloat = 10
-        let xVelocity = CGFloat.random(in: 2.5...7.5)
+        let desiredVelocityMagnitude: CGFloat = 6
+        let xVelocity = CGFloat.random(in: 3...5)
         let xSign: CGFloat = Bool.random() ? 1 : -1
         let yVelocity = sqrt(pow(desiredVelocityMagnitude, 2) - pow(xVelocity, 2))
         let ySign: CGFloat = Bool.random() ? 1 : -1
@@ -128,16 +127,14 @@ class PongView: ScreenSaverView {
     // MARK: - Clock Functions
     private func displayTime() {
         timeLabel.translatesAutoresizingMaskIntoConstraints = false;
-        timeLabel.detailLabel.stringValue = "Hello"
-        timeLabel.textLabel.stringValue = "World"
         addSubview(timeLabel)
     }
     
     private func drawTime() {
-        timeLabel.frame = NSRect(x: ballPosition.x - ballRadius,
-        y: ballPosition.y - ballRadius,
-        width: 100,
-        height: 100)
+        timeLabel.detailLabel.stringValue = timeLabel.updateTime()
+        timeLabel.frame = NSRect(x: (ballPosition.x - ballRadius/2) - timeOffsetX,
+        y: (ballPosition.y - ballRadius/2) + timeOffsetY,
+        width: ballRadius*2, height: ballRadius*2)
     }
     
 }
