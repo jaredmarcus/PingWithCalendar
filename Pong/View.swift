@@ -11,25 +11,26 @@ import AppKit
 final class View: NSView {
     let settings = Settings()
     
+    //Label for numbers: "hours" and "minutes"
+    let textLabel: Label = {
+        let hour = Label()
+        hour.translatesAutoresizingMaskIntoConstraints = false
+        hour.textColor = .black
+        hour.alignment = .center
+        hour.font = NSFont.init(name: "SquareFont", size: 32.0)
+        return hour
+    }()
+    
     //Label for text: "hours" and "minutes"
     let detailLabel: Label = {
         let minutes = Label()
         minutes.translatesAutoresizingMaskIntoConstraints = false
         minutes.textColor = .black
-        minutes.alignment = .justified
-        minutes.font = NSFont.init(name: "SquareFont", size: 28.0)
+        minutes.alignment = .center
+        minutes.font = NSFont.init(name: "SquareFont", size: 22.0)
         return minutes
     }()
     
-    //Label for numbers: "hours" and "minutes"
-    let textLabel: Label = {
-        let hour = Label()
-        hour.translatesAutoresizingMaskIntoConstraints = false
-        hour.textColor = .white
-        hour.alignment = .justified
-        hour.font = NSFont.init(name: "SquareFont", size: 12.0)
-        return hour
-    }()
     
     func updateTime() -> String {
         let date = Date()
@@ -54,7 +55,7 @@ final class View: NSView {
         width: bwidth,
         height: bheight))
 
-        //addSubview(textLabel)
+        addSubview(textLabel)
         addSubview(detailLabel)
 
         NSLayoutConstraint.activate([
@@ -65,7 +66,7 @@ final class View: NSView {
             detailLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             detailLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             detailLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            detailLabel.topAnchor.constraint(equalTo: topAnchor)
+            //detailLabel.topAnchor.constraint(equalTo: topAnchor)
         ])
     }
     

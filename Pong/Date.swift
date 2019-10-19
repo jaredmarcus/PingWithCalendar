@@ -13,8 +13,6 @@ extension Date {
         let calendar = Calendar(identifier: .gregorian)
         let hour = calendar.component(.hour, from: self)
         let minute = calendar.component(.minute, from: self)
-        
-        
         return (
             hour: hour,
             minute: minute
@@ -23,7 +21,6 @@ extension Date {
     private func returnSec() -> Int{
         let calendar = Calendar(identifier: .gregorian)
         let second = calendar.component(.second, from: self)
-        
         return second
     }
 }

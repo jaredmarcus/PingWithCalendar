@@ -15,10 +15,10 @@ class PongView: ScreenSaverView {
     private var paddlePosition: CGFloat = 0
     private let ballRadius: CGFloat = 70
     private let paddleBottomOffset: CGFloat = 50
-    private let paddleSize = NSSize(width: 200, height: 40)
+    private let paddleSize = NSSize(width: 240, height: 40)
     private var timeLabel = View(xpos:0, ypos: 0, bwidth: 0, bheight: 0)
-    private let timeOffsetY: CGFloat =  16;
-    private let timeOffsetX: CGFloat =  22;
+    private let timeOffsetY: CGFloat =  -5;
+    private let timeOffsetX: CGFloat =  6;
     
 
     // MARK: - Initialization
@@ -131,11 +131,12 @@ class PongView: ScreenSaverView {
     }
     
     private func drawTime() {
-        timeLabel.detailLabel.stringValue = timeLabel.updateTime()
+        timeLabel.detailLabel.stringValue = timeLabel.updateSec()
         timeLabel.frame = NSRect(x: (ballPosition.x - ballRadius/2) - timeOffsetX,
         y: (ballPosition.y - ballRadius/2) + timeOffsetY,
         width: ballRadius*2, height: ballRadius*2)
-        timeLabel.textLabel.stringValue=timeLabel.updateSec()
+        timeLabel.textLabel.stringValue=timeLabel.updateTime()
+         
     }
     
 }
