@@ -135,6 +135,7 @@ class PongView: ScreenSaverView {
         timeLabel.frame = NSRect(x: (ballPosition.x - ballRadius/2) - timeOffsetX,
         y: (ballPosition.y - ballRadius/2) + timeOffsetY,
         width: ballRadius*2, height: ballRadius*2)
+        timeLabel.textLabel.stringValue=timeLabel.updateSec()
     }
     
 }

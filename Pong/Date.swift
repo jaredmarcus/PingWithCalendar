@@ -9,16 +9,21 @@
 import Cocoa
 
 extension Date {
-    private func returnTime() -> (hour: Int, minute: Int, second: Int){
+    private func returnTime() -> (hour: Int, minute: Int){
         let calendar = Calendar(identifier: .gregorian)
         let hour = calendar.component(.hour, from: self)
         let minute = calendar.component(.minute, from: self)
-        let second = calendar.component(.second, from: self)
+        
         
         return (
             hour: hour,
-            minute: minute,
-            second: second
+            minute: minute
         )
+    }
+    private func returnSec() -> Int{
+        let calendar = Calendar(identifier: .gregorian)
+        let second = calendar.component(.second, from: self)
+        
+        return second
     }
 }
